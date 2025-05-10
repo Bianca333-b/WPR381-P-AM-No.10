@@ -27,7 +27,29 @@ router.get('/contact', (req, res) => {
 // Contact (POST)
 router.post('/contact', (req, res) => {
   const { name, email, message } = req.body;
-  contacts.push({ name, email, message });
+   // Basic validation
+
+if (!name || name.trim().length < 2) {
+    errors.push("Name is required and must be at least 2 characters.");
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!email || !emailRegex.test(email)) {
+    errors.push("A valid email address is required.");
+  }
+
+  if (!message || message.trim().length < 10) {
+    errors.push("Message must be at least 10 characters.");
+  }
+
+if (errors.length > 0) {
+    return res.status(400).render('pages/contact', {
+      errors,
+      formData: { name, email, message }
+    });
+  }
+
+   contacts.push({ name, email, message });
   res.redirect('/thankyou');
 });
 

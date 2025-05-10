@@ -14,3 +14,11 @@ body {
     margin: 0 10px;
     text-decoration: none;
   }
+
+  .error-box {
+  background-color: #ffe6e6;
+  border: 1px solid #cc0000;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #cc0000;
+}
