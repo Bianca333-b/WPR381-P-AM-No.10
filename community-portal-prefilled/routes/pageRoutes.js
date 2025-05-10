@@ -21,7 +21,10 @@ router.get('/events', (req, res) => {
 
 // Contact (GET)
 router.get('/contact', (req, res) => {
-  res.render('pages/contact');
+res.render('pages/contact', {
+    errors: [],
+    formData: { name: '', email: '', message: '' }
+  });
 });
 
 // Contact (POST)
