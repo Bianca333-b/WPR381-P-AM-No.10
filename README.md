@@ -72,7 +72,14 @@ cd community-portal
 npm install
 
 ## Start in Development Mode
-npm run dev
+cd "C:\path\to\your\project"
+node app.js
+
+### 👉 One-Click Start (Windows)
+
+Alternatively, you can start the app by simply double-clicking the `start-server.bat` file located in the root folder.
+
+This will launch the server and keep the terminal window open.
 
 ## Open in browser:
 http://localhost:3000
