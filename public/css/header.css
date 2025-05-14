@@ -105,3 +105,66 @@
         margin-bottom: 1rem;
       }
   }
+  .hero {
+  background: url('/images/community-bg.jpg') no-repeat center center/cover;
+  height: 60vh;
+  position: relative;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  width: 100%;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* Mission Section */
+.mission {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+  padding: 1rem;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Highlights Section */
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #f7f7f7;
+}
+
+.highlight-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 280px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.highlight-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
