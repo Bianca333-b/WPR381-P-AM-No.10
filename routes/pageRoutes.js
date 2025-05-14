@@ -6,7 +6,7 @@ const { teamMembers, events, contacts } = require('../data/data');
 
 //Home
 router.get('/', (req, res) => {
-    res.render('pages/home',{events});
+    res.render('pages/home',{events, cssFile:"homepage.css"});
 });
 
 // About

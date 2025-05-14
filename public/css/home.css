@@ -1,0 +1,301 @@
+
+/* Custom CSS for home page */
+
+:root {
+  --primary-color: #3b5998;
+  --secondary-color: #6c757d;
+  --accent-color: #ff6b6b;
+  --light-bg: #f8f9fa;
+  --dark-bg: #343a40;
+  --text-color: #333;
+  --card-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.text-highlight {
+  color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--light-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 100px;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233b5998' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  padding-right: 200px;
+}
+
+/* Features Section */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 3px;
+  width: 60px;
+  background-color: var(--primary-color);
+}
+
+.features-section {
+  background-color: white;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+  transition: var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(59, 89, 152, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.icon-wrapper i {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Events Preview Section */
+.events-preview-section {
+  background-color: var(--light-bg);
+}
+
+.event-preview-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.event-preview-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.event-date {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 0;
+}
+
+.event-date .month {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.event-date .day {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.event-info {
+  flex: 1;
+  padding: 1rem 1.5rem;
+}
+
+.event-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 0;
+}
+
+.btn-link:hover {
+  color: #2d4373;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background-color: white;
+}
+
+.testimonial-wrapper {
+  position: relative;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-icon i {
+  font-size: 24px;
+  color: white;
+}
+
+.testimonial-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.testimonial-author h5 {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.testimonial-author p {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 0;
+}
+
+.cta-wrapper {
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.cta-wrapper h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .hero-section {
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .text-md-end {
+    text-align: center !important;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  section {
+    padding: 3rem 0;
+  }
+  
+  .event-preview-card {
+    flex-direction: column;
+  }
+  
+  .event-date {
+    width: 100%;
+    padding: 0.5rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .event-date .month,
+  .event-date .day {
+    font-size: 1rem;
+  }
+}
+ 

@@ -5,7 +5,7 @@ const path = require("path");
 const pageRoutes = require("./routes/pageRoutes");
 
 const app = express();
-const port = process.env.port || 3000;
+const port = process.env.port || 8080;
 
 app.use(express.urlencoded({ extended: true })); // Handles POST form data
 app.use(express.static(path.join(__dirname, "public")));//Serves /css and /images, static files from the public/ folder
