@@ -1,0 +1,37 @@
+ <%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="/css/events.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1 class="page-title">Upcoming Events</h1>
+            <p class="subtitle">Explore our exciting lineup of events happening in New York City. Click on the map markers or event listings to learn more about each event.</p>
+            
+                    
+                    <div class="events-list">
+                        <h1>Upcoming Events</h1>
+                            <ul>
+                            <% events.forEach(event => { %>
+                                <li>
+                                <strong><%= event.title %></strong><br>
+                                <%= event.date %> @ <%= event.location %><br>
+                                <img src="<%= event.image %>" width="200">
+                                </li>
+                            <% }); %>
+                            </ul>
+                            <p>Check out what's happening soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+         
+</body>
+</html>
+<%- include('../partials/footer') %>

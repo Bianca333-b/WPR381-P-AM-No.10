@@ -11,19 +11,19 @@ router.get('/', (req, res) => {
 
 // About
 router.get('/about', (req, res) => {
-  res.render('pages/about', { teamMembers });
+  res.render('pages/about', { teamMembers, cssFile: "about.css" });
 });
 
 // Events
 router.get('/events', (req, res) => {
-  res.render('pages/events', { events });
+  res.render('pages/events', { events, cssFile: "events.css" });
 });
 
 // Contact (GET)
 router.get('/contact', (req, res) => {
 res.render('pages/contact', {
     errors: [],
-    formData: { name: '', email: '', message: '' }
+    formData: { name: '', email: '', message: ''}, cssFile: "contact.css" 
   });
 });
 
@@ -48,7 +48,7 @@ if (!name || name.trim().length < 2) {
 if (errors.length > 0) {
     return res.status(400).render('pages/contact', {
       errors,
-      formData: { name, email, message }
+      formData: { name, email, message }, cssFile: "contact.css"
     });
   }
 
@@ -58,7 +58,11 @@ if (errors.length > 0) {
 
 // Thank You
 router.get('/thankyou', (req, res) => {
-  res.render('pages/thankyou');
+  res.render('pages/thankyou', { cssFile: "thankyou.css" });
 });
 
 module.exports = router;
+
+
+// Sample team member data
+
